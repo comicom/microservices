@@ -1,4 +1,4 @@
-# fast campurs
+# SIMPLE AWS PROJECTS
 
 ## Part 1. AWS & Docker를 활용한 DevOps 구축
 
