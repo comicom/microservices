@@ -30,6 +30,12 @@ Message Queuing Telemetry Transport (MQTT, ISO 20922) 서비스
 
 ### 아키텍처
 
+## 예제
+
+paypal Kafka example
+
+https://github.com/paypal/couchbasekafka
+
 ## Reference
 
 https://kafka.apache.org/
