@@ -1,2 +1,3 @@
 # kafka
 
+https://victorydntmd.tistory.com/344
