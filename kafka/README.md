@@ -40,6 +40,8 @@ https://github.com/paypal/couchbasekafka
 
 https://kafka.apache.org/
 
+https://zookeeper.apache.org/
+
 https://epicdevs.com/17?category=460351
 
 https://victorydntmd.tistory.com/344
