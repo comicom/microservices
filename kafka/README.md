@@ -2,6 +2,10 @@
 
 https://victorydntmd.tistory.com/344
 
+https://www.popit.kr/kafka-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-%EC%B2%98%EC%9D%8C-%EC%A0%91%ED%95%98%EB%8A%94-kafka
+
+https://www.popit.kr/kafka-consumer-group/
+
 ## Backgroud
 
 ### 메시징 시스템
@@ -27,3 +31,7 @@ https://victorydntmd.tistory.com/344
 Kafka, RbbitMQ 등은 **"AMQP를 구현한 MOM 시스템이다"**
 
 Message Queuing Telemetry Transport (MQTT, ISO 20922) 서비스
+
+## 본론
+
+### 아키텍처
