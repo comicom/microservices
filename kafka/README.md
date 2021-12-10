@@ -2,7 +2,11 @@
 
 https://victorydntmd.tistory.com/344
 
-## 용어 정리
+## Backgroud
+
+### 메시징 시스템
+
+#### 용어 정리
 
 * MOM ( Message Oriented Middleware, 메시지 지향 미들웨어 )
   * 독립된 애플리케이션 간에 데이터를 주고받을 수 있도록 하는 시스템 디자인
@@ -20,6 +24,6 @@ https://victorydntmd.tistory.com/344
 * AMQP ( Advanced Message Queueing Protocol )
   * 메시지를 안정적으로 주고받기 위한 인터넷 프로토콜
 
-Kafka, RbbitMQ 등은 **AMQP를 구현한 MOM 시스템이다"**
+Kafka, RbbitMQ 등은 **"AMQP를 구현한 MOM 시스템이다"**
 
 Message Queuing Telemetry Transport (MQTT, ISO 20922) 서비스
