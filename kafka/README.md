@@ -1,11 +1,5 @@
 # kafka
 
-https://victorydntmd.tistory.com/344
-
-https://www.popit.kr/kafka-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-%EC%B2%98%EC%9D%8C-%EC%A0%91%ED%95%98%EB%8A%94-kafka
-
-https://www.popit.kr/kafka-consumer-group/
-
 ## Backgroud
 
 ### 메시징 시스템
@@ -35,3 +29,13 @@ Message Queuing Telemetry Transport (MQTT, ISO 20922) 서비스
 ## 본론
 
 ### 아키텍처
+
+## Reference
+
+https://kafka.apache.org/
+
+https://victorydntmd.tistory.com/344
+
+https://www.popit.kr/kafka-%EC%9A%B4%EC%98%81%EC%9E%90%EA%B0%80-%EB%A7%90%ED%95%98%EB%8A%94-%EC%B2%98%EC%9D%8C-%EC%A0%91%ED%95%98%EB%8A%94-kafka
+
+https://www.popit.kr/kafka-consumer-group/
