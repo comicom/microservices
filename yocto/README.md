@@ -25,7 +25,7 @@ https://www.yoctoproject.org/
 
 Porting을 진행하면서 규칙을 발견했다. 이를 Automation 한 것 Yocto이다.
 
-Yocto는 Porting을 이미 진행한 Custom Linux를 쉽게 배포할 수 있도록 하는 이다.
+Yocto는 Embedded 환경에 맞춰서 Porting을 진행한 Custom Linux를 쉽게 배포할 수 있도록 하는 도구이다.
 
 ## Linux for Embedded System
 
