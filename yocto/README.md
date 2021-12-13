@@ -12,8 +12,10 @@ https://www.yoctoproject.org/
   * In Embedded platform
     * consumer
     * mobile (Android)
-    * network (Network)
-    * automotive(AGL)
+    * network (CGL Linux | RTOS)
+    * automotive (AGL Linux | RTOS)
+    * aerospace & defense (RTOS)
+    * ...
   * (bootloader(coding) + kernel(coding) + rootfile system + library + application(coding) ) → package
   * source code download(fetch) → unpack → patch → configure → compile → install → package
 * Converting
