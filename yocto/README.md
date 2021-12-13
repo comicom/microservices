@@ -14,5 +14,7 @@ https://www.yoctoproject.org/
     * mobile (Android)
     * network (Network)
     * automotive(AGL)
+  * (bootloader(coding) + kernel(coding) + rootfile system + library + application(coding) ) → package
+  * source code download(fetch) → unpack → patch → configure → compile → install → package
 * Converting
   * Linux 환경에서 C++로 만든 것 > JAVA로 개발언어 변경
