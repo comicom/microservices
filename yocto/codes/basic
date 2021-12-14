@@ -6,4 +6,6 @@ source oe-init-build-env
 
 bitbake core-image-minimal
 
+sudo ./runqemu-ifup 1000 1000 /usr/bin/ 
 runqemu qemux86-64 nographic
+sudo ./runqemu-ifdown tap0 /usr/bin/
