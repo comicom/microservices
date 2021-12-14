@@ -37,42 +37,42 @@ Yocto는 Embedded 환경에 맞춰서 Porting을 진행한 Custom Linux를 쉽�
 ### 개발자의 역할
 
 1. 개발자가 빌드 스크립트를 작성한다. 
-  - Metadata(.bb + patches) 파일들을 작성한다.
-  - Yocto로 개발시 개발자가 주로 하는 일이다.
+    - Metadata(.bb + patches) 파일들을 작성한다.
+    - Yocto로 개발시 개발자가 주로 하는 일이다.
 
 2. 환경설정, Machine 등을 설정한다
-  - Machine(BSP) configuration, Policy Configuration, User Configuration. 주로 build 환경 설정 후 conf폴더 내의 .conf 파일들을 수정하는 작업을 말한다.
-  - 개발자가 작성/다운 받은 레시피들 중에서 어떤 machine 환경에서 빌드할 것인지 설정하는 작업이다.
+    - Machine(BSP) configuration, Policy Configuration, User Configuration. 주로 build 환경 설정 후 conf폴더 내의 .conf 파일들을 수정하는 작업을 말한다.
+    - 개발자가 작성/다운 받은 레시피들 중에서 어떤 machine 환경에서 빌드할 것인지 설정하는 작업이다.
 
 3. bitbake 명령어로 빌드한다
-  - 작성한 Metadata 파일과 설정 환경에 따라서 Yocto를 구동시킨다. 여기까지가 개발자가 하는 일이다.
-  - 중간에 문제가 없으면 나머지는 yocto가 알아서 해준다.
+    - 작성한 Metadata 파일과 설정 환경에 따라서 Yocto를 구동시킨다. 여기까지가 개발자가 하는 일이다.
+    - 중간에 문제가 없으면 나머지는 yocto가 알아서 해준다.
 
 ### Yocto의 역할
 
 1. 소스 코드를 받아온다.
-  - Metadata에 .bb 파일을 보면 SRC_URI가 있고 여기에 주소가 입력되어 있다.
-  - 이건 위 주소에서 파일들을 받아오라는 뜻이다. 
+    - Metadata에 .bb 파일을 보면 SRC_URI가 있고 여기에 주소가 입력되어 있다.
+    - 이건 위 주소에서 파일들을 받아오라는 뜻이다. 
 
 2. 패치를 적용한다. 
-  - Patch Application, SRC_URI에 가끔 file://somepatch.patch 로 패치파일이 들어가 있는 경우가 있다.
-  - 이건 소스를 받고 패치 파일을 적용하라는 뜻이다. 
+    - Patch Application, SRC_URI에 가끔 file://somepatch.patch 로 패치파일이 들어가 있는 경우가 있다.
+    - 이건 소스를 받고 패치 파일을 적용하라는 뜻이다. 
 
 3. Config 파일 만들고 빌드 시작
-  - Configuration/Compile 리눅스를 컴파일 할 때를 생각해보면 먼저 config 파일을 만들고 다음 그 config 파일을 토대로 compile을 한다. 이것도 똑같다.
-  - 1, 2에서 받아온 소스코드들을 가지고 configuration 작업을 하고 compile을 하는 것이다. 
-  - 리눅스 같은 OS 코드 뿐만 아니라 gcc 컴파일러도 받아온다.
+    - Configuration/Compile 리눅스를 컴파일 할 때를 생각해보면 먼저 config 파일을 만들고 다음 그 config 파일을 토대로 compile을 한다. 이것도 똑같다.
+    - 1, 2에서 받아온 소스코드들을 가지고 configuration 작업을 하고 compile을 하는 것이다. 
+    - 리눅스 같은 OS 코드 뿐만 아니라 gcc 컴파일러도 받아온다.
 
 4. 생성된 package 파일들 분석
-  - 만들어진 파일들을 분석해 package 형태로 만든다. 그리고 각각의 연관 관계를 분석한다.
+    - 만들어진 파일들을 분석해 package 형태로 만든다. 그리고 각각의 연관 관계를 분석한다.
 
 5. Generation
-  - 만들어지 파일들을 ipk, rpm, deb 파일의 형태로 만든다.
-  - 어디든 쉽게 적용 할 수 있게 압축된 형태로 제공하는 것이다.
+    - 만들어지 파일들을 ipk, rpm, deb 파일의 형태로 만든다.
+    - 어디든 쉽게 적용 할 수 있게 압축된 형태로 제공하는 것이다.
 
 6. 이미지 생성
-  - 만들어진 파일들을 모두 통합해서 통합 이미지를 만든다.
-  - 이 이미지는 아까 개발자가 입력한 Machine에 빌드 할 수 있는 이미지이다.
+    - 만들어진 파일들을 모두 통합해서 통합 이미지를 만든다.
+    - 이 이미지는 아까 개발자가 입력한 Machine에 빌드 할 수 있는 이미지이다.
 
 ## Bitbake
 
