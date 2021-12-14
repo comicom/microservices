@@ -59,14 +59,13 @@ bbhello/
 ```
 
 
-bitbake -h
+### bitbake -h
 ```
 Usage: bitbake [options] [recipename/target recipe:do_task ...]
 ```
 
-bitbake-layers -h
+### bitbake-layers -h
 ```
-
 NOTE: Starting bitbake server...
 usage: bitbake-layers [-d] [-q] [-F] [--color COLOR] [-h] <subcommand> ...
 
