@@ -31,3 +31,16 @@ Yocto는 Embedded 환경에 맞춰서 Porting을 진행한 Custom Linux를 쉽�
 
 ## Linux for Embedded System
 
+
+## Bitbake
+
+http://git.openembedded.org/bitbake
+
+* Bitbake는 Make 및 Ant(아파치 엔트)와 호환되는 빌드 도구
+* Portage의 파생, Portage는 젠투 리눅스 배포판에서 사용하는 빌드 및 패키지 관리 시스템
+* yocto의 poky를 사용할 때는 poky의 메타 데이터와 알맞은 bitbake 버전이 포함되어 있음
+
+
+
+
+
