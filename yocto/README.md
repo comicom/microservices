@@ -197,7 +197,14 @@ mkdir ~/hello
 cd ~/hello
 ```
 
-2. 
+2. Setting BBPATH
+
+```shell
+$ BBPATH="projectdirectory"
+$ export BBPATH
+```
+
+>> BBPATH가 자동으로 잡힘
 
 
 
