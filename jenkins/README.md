@@ -104,7 +104,7 @@ docker run --name jenkins-docker --rm --detach \
 
 4. Customise official Jenkins Docker image, by executing below two steps:
 
-  a. Create Dockerfile with the following content:
+    a. Create Dockerfile with the following content:
 
 ```shell
 FROM jenkins/jenkins:2.319.1-jdk11
@@ -121,7 +121,7 @@ USER jenkins
 RUN jenkins-plugin-cli --plugins "blueocean:1.25.2 docker-workflow:1.26"
 ```
 
-  b. Build a new docker image from this Dockerfile and assign the image a meaningful name, e.g. "myjenkins-blueocean:1.1":
+    b. Build a new docker image from this Dockerfile and assign the image a meaningful name, e.g. "myjenkins-blueocean:1.1":
 
 ```shell
 docker build -t myjenkins-blueocean:1.1 .
