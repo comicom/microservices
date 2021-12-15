@@ -29,11 +29,34 @@ Porting을 진행하면서 규칙을 발견했다. 이를 Automation 한 것이 
 
 Yocto는 Embedded 환경에 맞춰서 Porting을 진행한 Custom Linux를 쉽게 배포할 수 있도록 하는 도구이다.
 
+![YoctoDevelopmentEnvironment2.png](https://github.com/comicom/microservices/blob/main/yocto/images/02_YoctoDevelopmentEnvironment2.png)
+
+### OpenEmbedded-Core
+OpenEmbedded project와 공유되는 core meta data, base layer 묶음. OpenEmbedded project는http://openembedded.org를 home page 로하는 별도의 build system으로, 이것만 가지고도 linux 배포 판을 만들 수 있을 정도로 매우 강력함. 
+ 
+### Poky
+Yocto project의 reference system으로, 다양한 tool과 meta data 로 이루어짐. 여기에 자신만의 target board 에 대한 내용 을 추가해 줌으로써 최종적으로 원하는 linux system을 만들어 낼 수 있음. 포키 프로젝트가 안정된 비트베이크를 포함하고 있음. 
+    * L Meta data, 아래 세 가지를 일컬어 meta data라고함.    
+        - Recipes ( .bb - bitbake ) :
+          - the logical units of software/images to build
+          - buildroot의 package에해당하는내용.
+          - source download -> build -> install 관련내용을기술하고있음.
+          - BitBake가이내용을보 고, 실제 action을취하게됨.
+        - Classes ( .bbclass ) : abstraction to common code(task)    
+        - Configuration files ( .conf ) : global definitions of variables
+    * L Poky Meta Data 구성
+        - meta : 아키텍쳐 관련  메타 데이터 -arm,x86,mips,powerpc, qemu
+        - meta-yocto : 포키 배포한 특화 메타 데이터
+        - meta-yocto-bsp : 레퍼런스 하드웨어 개발보드에 대한 bsp 메타데이터
+        - meta-skeleton : 레이어 탬플릿 디렉토리
+        - meta 데이터에 포함된 recipes 조회 : ls meta*/recipes*/images/*.bb
+ 
+### BitBake
+python과 shell script 로 만들어진 task scheduler로써, Recipes 를 읽어 build하고자하는 source를 download하고, build한후, 최종 install 하기 까지의 전 과정을 담당함. Make 와 유사하다고 볼 수도 있겠으나, 실제로는 규모면에서 차이가 있음
+
 ## Linux for Embedded System
 
 ![YoctoDevelopmentEnvironment.png](https://github.com/comicom/microservices/blob/main/yocto/images/02_YoctoDevelopmentEnvironment.png)
-
-![YoctoDevelopmentEnvironment2.png](https://github.com/comicom/microservices/blob/main/yocto/images/02_YoctoDevelopmentEnvironment2.png)
 
 ### 개발자의 역할
 
