@@ -281,3 +281,9 @@ Yocto의 하드웨어 지원
 * meta-xilinx
 * meta-zynq
 
+### 
+
+https://www.yoctoproject.org/software-overview/downloads/
+
+https://github.com/topics/yocto-project
+
