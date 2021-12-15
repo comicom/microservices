@@ -54,6 +54,8 @@ Yocto project의 reference system으로, 다양한 tool과 meta data 로 이루�
 #### BitBake
 python과 shell script 로 만들어진 task scheduler로써, Recipes 를 읽어 build하고자하는 source를 download하고, build한후, 최종 install 하기 까지의 전 과정을 담당함. Make 와 유사하다고 볼 수도 있겠으나, 실제로는 규모면에서 차이가 있음
 
+![YoctoDevelopmentEnvironment3.png](https://github.com/comicom/microservices/blob/main/yocto/images/02_YoctoDevelopmentEnvironment3.png)
+
 ## Linux for Embedded System
 
 ![YoctoDevelopmentEnvironment.png](https://github.com/comicom/microservices/blob/main/yocto/images/02_YoctoDevelopmentEnvironment.png)
