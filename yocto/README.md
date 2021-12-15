@@ -33,6 +33,7 @@ Yocto는 Embedded 환경에 맞춰서 Porting을 진행한 Custom Linux를 쉽�
 
 ![YoctoDevelopmentEnvironment.png](https://github.com/comicom/microservices/blob/main/yocto/images/02_YoctoDevelopmentEnvironment.png)
 
+![YoctoDevelopmentEnvironment2.png](https://github.com/comicom/microservices/blob/main/yocto/images/02_YoctoDevelopmentEnvironment2.png)
 
 ### 개발자의 역할
 
