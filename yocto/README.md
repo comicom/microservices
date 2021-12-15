@@ -104,17 +104,17 @@ python과 shell script 로 만들어진 task scheduler로써, Recipes 를 읽어
 2. 자신의 target board에맞는 BSP layer를 하나 만든다. 혹은 기존에 존재하는 내용이 있다면 이를 이용(혹은개선)한다. 
 3. (필요하다고 판단이 될 경우) 기존에 다른 사람들이 만들어둔 여러 layer(meta-XXXX) 를 찾아 download 한다. 
 4. 자신의 target board에맞는 general layer를 만든다. (역시 필요할 경우)    
-     => conf file & meta data 를 적절히 준비(수정)해 둔다.    
-     => 추가로 필요한 recipe를 만들어 둔다. 
+     * conf file & meta data 를 적절히 준비(수정)해 둔다.    
+     * 추가로 필요한 recipe를 만들어 둔다. 
 5. bitbake - fetch
-     Recipe 파일을 토대로 build에 필요한 모든 source code를 download 한다. 
-     Source code 에 대한 patch가 존재할 경우 관련 fetch 를 진행한다. 
+     * Recipe 파일을 토대로 build에 필요한 모든 source code를 download 한다. 
+     * Source code 에 대한 patch가 존재할 경우 관련 fetch 를 진행한다. 
 6. bitbake - configure & compile
-      configure & compile을진행한다. 
+     * configure & compile을진행한다. 
 7. bitbake - install
-      install 을한다. 
+     * install 을한다. 
 8. bitbake - package
-      build가 정상적으로 진행될 경우, package 파일(RPM, ipk 등)을생성한다. 
+     * build가 정상적으로 진행될 경우, package 파일(RPM, ipk 등)을생성한다. 
 9. booting에 필요한 이미지(kernel, rootfs 등)를 생성한다.
 
 ## Bitbake
