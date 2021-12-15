@@ -262,5 +262,22 @@ BBFILE_COLLECTIONS += "mylayer"
 BBFILE_PATTERN_mylayer := "^${LAYERDIR_RE}/"
 ```
 
+## Board Surport Package (BSP)
 
+Yocto의 하드웨어 지원
+
+리눅스 커널 및 루트 파일시스템 이미지 생성을 위해 사용된다.
+
+### BSP 레이어 예시
+
+* meta-fsl-arm
+* meta-fsl-ppc
+* meta-fsl-intel
+* meta-fsl-intel-galileo
+* meta-minnow
+* meta-raspberrypi
+* meta-renesas
+* meta-ti
+* meta-xilinx
+* meta-zynq
 
