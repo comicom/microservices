@@ -124,6 +124,8 @@ python과 shell script 로 만들어진 task scheduler로써, Recipes 를 읽어
 
 http://git.openembedded.org/bitbake
 
+https://docs.yoctoproject.org/bitbake/bitbake-user-manual/bitbake-user-manual-intro.html#concepts
+
 * Bitbake는 Make 및 Ant(아파치 엔트)와 호환되는 빌드 도구
 * Portage의 파생, Portage는 젠투 리눅스 배포판에서 사용하는 빌드 및 패키지 관리 시스템
 * yocto의 poky를 사용할 때는 poky의 메타 데이터와 알맞은 bitbake 버전이 포함되어 있음
@@ -199,15 +201,66 @@ cd ~/hello
 
 2. Setting BBPATH
 
+conf/bblayers.conf와 관련이 깊다.
+
 ```shell
-$ BBPATH="projectdirectory"
-$ export BBPATH
+export BBPATH="projectdirectory"
 ```
 
->> BBPATH가 자동으로 잡힘
+> poky에서 'source oe-init-build-env'를 이용하면 BBPATH가 자동으로 잡힘
+> 'echo $BBPATH'를 이용하여 확인할 수 있음
 
+3. Creating conf/bitbake.conf
 
+**conf/bitbake.conf**
 
+includes a number of configuration variables BitBake uses for metadata and recipe files. For this example, you need to create the file in your project directory and define some key BitBake variables.
+
+```shell
+mkdir conf
+cd conf
+vim bitbake.conf
+```
+
+```python
+PN  = "${@bb.parse.vars_from_file(d.getVar('FILE', False),d)[0] or 'defaultpkgname'}"
+
+TMPDIR  = "${TOPDIR}/tmp"
+CACHE   = "${TMPDIR}/cache"
+STAMP   = "${TMPDIR}/${PN}/stamps"
+T       = "${TMPDIR}/${PN}/work"
+B       = "${TMPDIR}/${PN}"
+```
+
+```shell
+cd ../
+```
+
+example: https://git.openembedded.org/bitbake/tree/conf/bitbake.conf
+
+4. Creating classes/base.bbclass
+
+BitBake uses class files to provide common code and functionality. The minimally required class for BitBake is the classes/base.bbclass file.
+
+```shell
+mkdir classes
+```
+
+5. Creating a Layer
+
+```shell
+mkdir mylayer
+cd my layer
+mkdir conf
+vim layer.conf
+```
+
+``` python
+BBPATH .= ":${LAYERDIR}"
+BBFILES += "${LAYERDIR}/*.bb"
+BBFILE_COLLECTIONS += "mylayer"
+BBFILE_PATTERN_mylayer := "^${LAYERDIR_RE}/"
+```
 
 
 
