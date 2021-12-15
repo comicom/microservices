@@ -128,32 +128,13 @@ http://git.openembedded.org/bitbake
 * Portage의 파생, Portage는 젠투 리눅스 배포판에서 사용하는 빌드 및 패키지 관리 시스템
 * yocto의 poky를 사용할 때는 poky의 메타 데이터와 알맞은 bitbake 버전이 포함되어 있음
 
-## Bitbake Hello World
-
-기본 구성은 다음과 같다.
-
-```
-bbhello/
-├── class
-│   └── base.bbclass
-├── conf
-│   ├── bblayers.conf
-│   └── bitbake.conf
-└── meta-hello
-    ├── conf
-    │   └── layer.conf
-    └── recipes-editor
-        └── nano
-```
-
-
 ### bitbake -h
-```
+```shell
 Usage: bitbake [options] [recipename/target recipe:do_task ...]
 ```
 
 ### bitbake-layers -h
-```
+```shell
 NOTE: Starting bitbake server...
 usage: bitbake-layers [-d] [-q] [-F] [--color COLOR] [-h] <subcommand> ...
 
@@ -188,6 +169,38 @@ subcommands:
 
 Use bitbake-layers <subcommand> --help to get help on a specific command
 ```
+
+## Bitbake Hello World
+
+https://docs.yoctoproject.org/bitbake/bitbake-user-manual/bitbake-user-manual-hello.html
+
+기본 구성은 다음과 같다.
+
+```shell
+hello/
+├── classes
+│   └── base.bbclass
+├── conf
+│   ├── bblayers.conf
+│   └── bitbake.conf
+└── meta-hello
+    ├── conf
+    │   └── layer.conf
+    └── recipes-editor
+        └── nano
+```
+
+1. Create a Project Directory
+
+```shell
+mkdir ~/hello
+cd ~/hello
+```
+
+2. 
+
+
+
 
 
 
