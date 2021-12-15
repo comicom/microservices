@@ -104,7 +104,7 @@ docker run --name jenkins-docker --rm --detach \
 
 4. Customise official Jenkins Docker image, by executing below two steps:
 
-      * Create Dockerfile with the following content:
+Create Dockerfile with the following content:
 
 ```shell
 FROM jenkins/jenkins:2.319.1-jdk11
@@ -112,6 +112,7 @@ USER root
 RUN apt-get update && apt-get install -y lsb-release
 RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
   https://download.docker.com/linux/debian/gpg
+  
 RUN echo "deb [arch=$(dpkg --print-architecture) \
   signed-by=/usr/share/keyrings/docker-archive-keyring.asc] \
   https://download.docker.com/linux/debian \
@@ -121,13 +122,12 @@ USER jenkins
 RUN jenkins-plugin-cli --plugins "blueocean:1.25.2 docker-workflow:1.26"
 ```
 
-      * Build a new docker image from this Dockerfile and assign the image a meaningful name, e.g. "myjenkins-blueocean:1.1":
-
+Build a new docker image from this Dockerfile and assign the image a meaningful name, e.g. "myjenkins-blueocean:1.1":
 ```shell
 docker build -t myjenkins-blueocean:1.1 .
 ```
 
-  Keep in mind that the process described above will automatically download the official Jenkins Docker image if this hasn’t been done before.
+Keep in mind that the process described above will automatically download the official Jenkins Docker image if this hasn’t been done before.
 
 5. Run your own myjenkins-blueocean:1.1 image as a container in Docker using the following docker run command:
 
@@ -158,5 +158,6 @@ docker run --name jenkins-blueocean --rm --detach \
   --volume jenkins-docker-certs:/certs/client:ro \
   myjenkins-blueocean:1.1
 ```
-  Proceed to the Post-installation setup wizard.
+
+Proceed to the Post-installation setup wizard.
 
